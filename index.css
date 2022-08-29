@@ -1,0 +1,116 @@
+body {
+  background: lightblue;
+  /* text-align: center; */
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  /* transform: translateX(100px) rotateZ(-90deg); */
+  transition: 1s ease-out;
+  opacity: 0.5;
+}
+
+.cloud:nth-child(2) {
+  /* transform: translateX(100px) rotateZ(-90deg); */
+  /* transition: 1s ease-out; */
+  left: 10%;
+  animation: cloudy 100s linear 0s infinite normal both;
+}
+
+@keyframes cloudy {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(650px);
+  }
+}
+
+#hoverButton {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: pink;
+  padding: 40px 0;
+  color: #fff;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: 2s 1s linear;
+}
+
+#hoverButton:hover {
+  /* background: salmon; */
+  transform: scale(2, 2) rotate(360deg);
+}
+
+.grass {
+  margin-top: 100px;
+  background-color: greenyellow;
+  height: 200px;
+  width: 100%;
+}
+
+.road {
+  background-color: gray;
+  height: 200px;
+  position: relative;
+}
+
+.line {
+  border-top: 3px dashed #fff;
+  position: relative;
+}
+
+.mario {
+  text-align: left;
+  position: absolute;
+  animation: moving 3s linear infinite, jump 1s ease 1 1s;
+  /* animation-duration: 1s; */
+  /* animation-delay: 1s; */
+  /* animation-fill-mode: both; */
+  /* animation-iteration-count: 1; */
+  /* animation-direction: normal; */
+  /* animation-timing-function: ease; */
+}
+
+@keyframes moving {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(800px);
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: -40px;
+  }
+
+  50% {
+    top: -100px;
+  }
+
+  100% {
+    top: -40px;
+  }
+}
+
+.luigi {
+  display: none;
+  animation-name: moving;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+}
