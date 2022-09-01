@@ -1,0 +1,82 @@
+body {
+  background-color: #4a4a4a;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vw;
+}
+
+.popup {
+  position: relative;
+  top: 100px;
+  left: 200px;
+  height: 100px;
+  width: 250px;
+  padding: 20px;
+  color: #4a4a4a;
+  border: 1px solid #ffffff;
+  background-color: lemonchiffon;
+  transform-origin: top left;
+  animation: drop 2s ease forwards, swing 4s ease-in-out forwards 2s;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-400px);
+  }
+
+  65% {
+    transform: translateY(200px);
+  }
+
+  85% {
+    transform: translateY(150px);
+  }
+
+  90% {
+    transform: translateY(200px);
+  }
+
+  95% {
+    transform: translateY(170px);
+  }
+
+  100% {
+    transform: translateY(200px);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: translateY(200px) rotateZ(0deg);
+  }
+  40% {
+    transform: translateY(200px) rotateZ(90deg);
+  }
+  70% {
+    transform: translateY(200px) rotateZ(70deg);
+  }
+  100% {
+    transform: translateY(200px) rotateZ(75deg);
+  }
+}
+
+.productImage {
+  position: absolute;
+  /* transform: rotateY(20deg); */
+}
+
+.productImage:hover {
+  animation: swoosh 0.5s linear 1s 1;
+}
+
+@keyframes swoosh {
+  from {
+    transform: rotateY(360deg);
+  }
+
+  /* to {
+    transform: rotateY(0deg);
+  } */
+}
